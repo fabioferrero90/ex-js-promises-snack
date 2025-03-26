@@ -58,7 +58,7 @@ const lanciaDado = () => {
       } else {
         resolve(Math.floor(Math.random() * 6) + 1)
       }
-    })
+    }, 3000)
   })
 }
 
