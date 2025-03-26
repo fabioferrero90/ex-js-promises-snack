@@ -53,11 +53,10 @@ getPost(1)
 const lanciaDado = () => {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
-      const dado = Math.floor(Math.random() * 6) + 1
       if (Math.random() < 0.2) {
         reject("Dado Incastrato")
       } else {
-        resolve(dado)
+        resolve(Math.floor(Math.random() * 6) + 1)
       }
     })
   })
@@ -77,7 +76,7 @@ const creaLanciaDado = () => {
         } else {
           console.log("Dado:", dado)
         }
-        ultimoLancio = dado  // Move the update here
+        ultimoLancio = dado
       })
       .catch(err => console.error(err))
   }
